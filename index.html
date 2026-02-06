@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Rose Day, My Love 🌹</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div id="petal-layer"></div>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop></audio>
+
+  <main class="shell">
+    <header class="top-bar">
+      <div class="logo">
+        <span class="rose-icon">🌹</span>
+        <span class="logo-text">Rose Day</span>
+      </div>
+      <button id="musicToggle" class="pill-btn pill-muted" type="button">
+        ♫ Music Off
+      </button>
+    </header>
+
+    <!-- START SCREEN -->
+    <section id="screen-start" class="panel panel-active">
+      <div class="panel-inner">
+        <h1 class="script-title">Happy Rose Day</h1>
+        <p class="subtitle">
+          A tiny garden of surprises, grown just for you, Jaan. 💌
+        </p>
+
+        <div class="card glass-card">
+          <p class="label center">
+            This garden blooms only for you, <strong>Jaan</strong> 🌹
+          </p>
+          <p class="hint center">
+            Your name is whispered into every petal, forever.
+          </p>
+        </div>
+
+        <button id="startJourneyBtn" class="primary-btn big-btn" type="button">
+          Begin the rose journey ✨
+        </button>
+
+        <p class="tiny-note">
+          Pssst... tap the little glowing heart below when you find it. It hides a secret.
+        </p>
+
+        <div class="floating-heart" id="secretHeart" aria-hidden="true">💗</div>
+      </div>
+    </section>
+
+    <!-- GARDEN SCREEN -->
+    <section id="screen-garden" class="panel">
+      <div class="panel-inner two-column">
+        <div class="left">
+          <h2 class="section-title">
+            For you, my <span id="dynamicName">Jaan</span> 🌹
+          </h2>
+          <p class="section-text">
+            Every petal here carries a tiny piece of what I feel for you.
+            Touch them gently, and let them tell you secrets of my heart.
+          </p>
+
+          <div class="rose-grid" id="roseGrid"></div>
+
+          <button id="nextToReasonsBtn" class="primary-btn" type="button">
+            Continue to your secret reasons ➜
+          </button>
+        </div>
+
+        <div class="right">
+          <div class="glass-card">
+            <p class="label">Tiny surprise messages</p>
+            <p id="surpriseMessage" class="surprise-text">
+              Click a glowing rose to read what it wants to tell you…
+            </p>
+            <button id="shuffleMessageBtn" class="pill-btn" type="button">
+              Shuffle another sweet thought ♡
+            </button>
+          </div>
+
+          <div class="progress">
+            <div class="progress-label">Your surprise journey</div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps">
+              <span class="step done">Garden</span>
+              <span class="step">Reasons</span>
+              <span class="step">Final Letter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASONS SCREEN -->
+    <section id="screen-reasons" class="panel">
+      <div class="panel-inner">
+        <h2 class="section-title center">
+          Reasons my heart chose you, Jaan 💖
+        </h2>
+        <p class="section-text center">
+          Each petal hides a reason. Tap them one by one, slowly, like you’re
+          reading my heartbeat.
+        </p>
+
+        <div class="reasons-grid" id="reasonsGrid"></div>
+
+        <button id="openLetterBtn" class="primary-btn big-btn" type="button">
+          Reveal your final love letter 💌
+        </button>
+      </div>
+    </section>
+
+    <!-- FINAL LETTER -->
+    <section id="letterOverlay" class="overlay">
+      <div class="overlay-backdrop"></div>
+      <div class="overlay-card">
+        <button id="closeLetterBtn" class="overlay-close" type="button">×</button>
+        <h2 class="section-title center">My Letter To You</h2>
+        <p id="letterNameLine" class="letter-dear">Dear my beautiful Jaan,</p>
+        <div class="letter-body" id="letterBody"></div>
+        <button id="confettiBtn" class="primary-btn" type="button">
+          Shower the sky with roses 🌹
+        </button>
+      </div>
+    </section>
+
+    <!-- SECRET NOTE -->
+    <section id="secretNoteOverlay" class="overlay">
+      <div class="overlay-backdrop"></div>
+      <div class="overlay-card small">
+        <button id="closeSecretNoteBtn" class="overlay-close" type="button">×</button>
+        <h3 class="section-title center small-title">Secret Note</h3>
+        <p class="letter-body">
+          If you found this, it means you pay attention to the tiny details—just
+          like I cherish every tiny detail about you.  
+          Thank you for being the softest part of my world, Jaan
